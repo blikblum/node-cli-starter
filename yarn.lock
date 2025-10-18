@@ -589,6 +589,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@logtape/logtape@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@logtape/logtape@npm:1.1.1"
+  checksum: 10c0/7f95902496cc2b106767a79885774179bad39365848e1cc9867d52d496d6bd394513df5a5374700773602d59c3a6b66ede7a59463b6b3d8e911044c6c6565798
+  languageName: node
+  linkType: hard
+
 "@modelcontextprotocol/sdk@npm:^1.8.0":
   version: 1.11.2
   resolution: "@modelcontextprotocol/sdk@npm:1.11.2"
@@ -2854,6 +2861,7 @@ __metadata:
   resolution: "node-cli-starter@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.26.0"
+    "@logtape/logtape": "npm:^1.1.1"
     "@tsconfig/node22": "npm:^22.0.1"
     "@types/node": "npm:22.15.0"
     "@vitest/coverage-v8": "npm:^3.1.3"

@@ -1,4 +1,5 @@
 import { Command, Option } from 'clipanion'
+import { logger } from '../logger'
 
 export class SampleCommand extends Command {
   static paths = [[]]
@@ -9,10 +10,10 @@ export class SampleCommand extends Command {
   // eslint-disable-next-line @typescript-eslint/require-await
   async execute() {
     if (this.valueT) {
-      this.context.stdout.write(`t value: ${this.valueT}\n`)
+      logger.info(`t value: ${this.valueT}`)
     }
     if (this.valueW) {
-      this.context.stdout.write(`w value: ${this.valueW}\n`)
+      logger.info(`w value: ${this.valueW}`)
     }
   }
 }

@@ -4,5 +4,16 @@
 
 import { runExit } from 'clipanion'
 import { SampleCommand } from './commands/SampleCommand'
+import { initializeLogger } from './logger'
 
-runExit([SampleCommand])
+initializeLogger()
+  .then(() => {
+    runExit([SampleCommand]).catch((error: unknown) => {
+      console.error(error)
+    })
+  })
+  .catch(() => {
+    console.error('Failed to configure logging')
+    // Failed to configure logging
+    process.exit(1)
+  })
