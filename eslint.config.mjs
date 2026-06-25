@@ -8,15 +8,15 @@ export default tseslint.config(
     ignores: ['**/.*', 'dist/'],
   },
   {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
+    files: ['src/**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
     ...js.configs.recommended,
   },
   {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
+    files: ['src/**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
     languageOptions: { globals: globals.node },
   },
   {
-    files: ['**/*.{ts,mts,cts,tsx}'],
+    files: ['src/**/*.{ts,mts,cts,tsx}'],
     extends: [...tseslint.configs.strictTypeChecked, ...tseslint.configs.stylisticTypeChecked],
     languageOptions: {
       parserOptions: {

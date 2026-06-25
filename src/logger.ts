@@ -1,6 +1,4 @@
-import { getLogger } from '@logtape/logtape'
-import { configure, type LogRecord } from '@logtape/logtape'
-import { Cli } from 'clipanion'
+import { configure, getLogger, type LogRecord } from '@logtape/logtape'
 import { Writable } from 'stream'
 
 export const logger = getLogger('my-app')
@@ -19,8 +17,8 @@ function simpleFormatter(record: LogRecord): string {
     .join(' ')
 }
 
-let stdoutWritable: Writable = Cli.defaultContext.stdout
-let stderrWritable: Writable = Cli.defaultContext.stderr
+let stdoutWritable: Writable = process.stdout
+let stderrWritable: Writable = process.stderr
 
 export function setLoggerOutput({ stdout, stderr }: { stdout?: Writable; stderr?: Writable }) {
   stdoutWritable = stdout ?? stdoutWritable
