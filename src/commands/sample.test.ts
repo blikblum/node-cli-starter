@@ -1,7 +1,7 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { createAndRegisterCli, createWritable } from '../testUtils'
-import { sampleCommand } from './sample'
-import { initializeLogger, setLoggerOutput } from '../logger'
+import { createAndRegisterCli, createWritable } from '../testUtils.js'
+import { sampleCommand } from './sample.js'
+import { initializeLogger, setLoggerOutput } from '../logger.js'
 
 describe('SampleCommand', () => {
   beforeAll(async () => {

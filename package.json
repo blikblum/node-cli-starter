@@ -1,12 +1,15 @@
 {
   "name": "node-cli-starter",
+  "description": "A node cli starter",
   "private": true,
   "version": "0.1.0",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "rolldown ./src/index.ts --dir dist",
     "check-types": "tsc --noEmit",
     "dev": "tsx ./src/index.ts",
+    "dev:interactive": "tsx src/interactive.ts",
     "format": "oxfmt ./src --write",
     "format:check": "oxfmt ./src --check",
     "lint": "oxlint ./src",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "@gunshi/docs": "^0.37.1",
+    "@inquirer/prompts": "^8.7.1",
     "@tsconfig/node22": "^22.0.6",
     "@types/node": "^24.13.3",
     "@vitest/coverage-v8": "^4.1.11",

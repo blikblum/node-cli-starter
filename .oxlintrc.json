@@ -127,7 +127,6 @@
         "no-useless-constructor": "error",
         "no-throw-literal": "off",
         "prefer-promise-reject-errors": "off",
-        "require-await": "off",
         "typescript/await-thenable": "error",
         "typescript/ban-ts-comment": [
           "error",
@@ -189,7 +188,6 @@
         "typescript/prefer-reduce-type-parameter": "error",
         "typescript/prefer-return-this-type": "error",
         "typescript/related-getter-setter-pairs": "error",
-        "typescript/require-await": "error",
         "typescript/restrict-plus-operands": [
           "error",
           {
@@ -207,7 +205,7 @@
             "allowBoolean": false,
             "allowNever": false,
             "allowNullish": false,
-            "allowNumber": false,
+            "allowNumber": true,
             "allowRegExp": false
           }
         ],
@@ -274,6 +272,20 @@
       "plugins": [
         "typescript"
       ]
+    },
+    {
+      "files": [
+        "src/**/*.{ts,mts,cts,tsx}"
+      ],
+      "excludeFiles": [
+        "**/*.test.{js,mjs,cjs,ts,mts,cts,tsx}"
+      ],
+      "plugins": [
+        "typescript"
+      ],
+      "rules": {
+        "typescript/require-await": "error"
+      }
     }
   ]
 }

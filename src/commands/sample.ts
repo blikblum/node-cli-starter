@@ -1,5 +1,5 @@
 import { define } from 'gunshi'
-import { logger } from '../logger'
+import { logger } from '../logger.js'
 
 export const sampleCommand = define({
   name: 'sample',

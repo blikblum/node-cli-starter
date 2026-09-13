@@ -1,9 +1,10 @@
 {
-  "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
     "types": [
       "node"
     ],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "noEmit": true,
     "outDir": "dist",
     "rootDir": "src",
